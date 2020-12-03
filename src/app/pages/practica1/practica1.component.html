@@ -1,0 +1,140 @@
+  <h1>Practica 1</h1>
+  <hr>
+
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Nombres</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="user.nombre" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Apellidos:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="user.apellidos" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Fecha de nacimiento:</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" [(ngModel)]="user.dia" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Color:</label>
+    <div class="col-sm-4">
+      <input type="color" class="form-control" [(ngModel)]="user.color" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Fotografia:</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control-file" [(ngModel)]="user.fotografia">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Area de interes:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="user.area">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Correo electronico:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="user.correo" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" [(ngModel)]="user.password">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Direccion de su pagina web personal:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="user.direccion">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Pasatiempo:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="user.pasatiempo">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Fecha de ingreso a la educacion superior:</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" [(ngModel)]="user.fecha">
+    </div>
+  </div>
+
+<br>
+    <button (click)="agregar()" class="btn btn-success btn-lg btn-block">Agregar</button>
+
+      <!-- <p>
+          Nombres:<input type="text" [(ngModel)]="user.nombre">
+      </p>
+      <p>
+          Apellidos:<input type="text" [(ngModel)]="user.apellidos">
+      </p>
+      <p>
+          Dia:<input type="text" [(ngModel)]="user.dia">
+      </p>
+      <p>
+          Color:<input type="text" [(ngModel)]="user.color">
+      </p>
+      <p>
+          Fotografia:<input type="text" [(ngModel)]="user.fotografia">
+      </p>
+      <p>
+          Area de interes:<input type="text" [(ngModel)]="user.area">
+      </p>
+      <p>
+          Correo electronico:<input type="text" [(ngModel)]="user.correo">
+      </p>
+      <p>
+        Password:<input type="text" [(ngModel)]="user.password">
+    </p>
+    <p>
+        Direccion de su pagina web personal:<input type="text" [(ngModel)]="user.direccion">
+    </p>
+    <p>
+        Pasatiempo:<input type="text" [(ngModel)]="user.pasatiempo">
+    </p>
+    <p>
+        Fecha de ingreso:<input type="text" [(ngModel)]="user.fecha">
+    </p> -->
+
+      <br><br>
+
+      <table class="table table-dark">
+        <thead class="thead-dark">
+        <tr>
+            <td>Nombre</td>
+            <td>Apellidos</td>
+            <td>Dia</td>
+            <td>Color</td>
+            <td>Fotografia</td>
+            <td>Area</td>
+            <td>Correo</td>
+            <td>Password</td>
+            <td>Direccion</td>
+            <td>Pasatiempos</td>
+            <td>Fecha</td>
+        </tr>
+      </thead>
+        <tr *ngFor="let user of operaciones">
+            <td>{{user.nombre}}</td>
+            <td>{{user.apellidos}}</td>
+            <td>{{user.dia}}</td>
+            <td>{{user.color}}</td>
+            <td>{{user.fotografia}}</td>
+            <td>{{user.area}}</td>
+            <td>{{user.correo}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.direccion}}</td>
+            <td>{{user.pasatiempo}}</td>
+            <td>{{user.fecha}}</td>
+
+        </tr>
+    </table>
